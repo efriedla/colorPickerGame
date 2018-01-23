@@ -24,7 +24,6 @@ easyBtn.addEventListener("click", function(){
             boxes[i].style.display = "none";
         }
     }
-    
 });
 hardBtn.addEventListener("click", function(){
     hardBtn.classList.add("selected");
@@ -35,33 +34,32 @@ hardBtn.addEventListener("click", function(){
         if(boxes[i].style.display = "none"){
             boxes[i].style.display = "block"
         }
-    }
-   
+    } 
 });
-for (i = 0; i < boxes.length; i++){
-    //add colors to boxs
-    boxes[i].style.backgroundColor = colors[i];
-    // add click event listener
-    boxes[i].addEventListener("click", function(){
-        // alert(" was clicked!");
-        //grab clicked color box
-        var clickedColor = this.style.backgroundColor;
-        //compare to pickedColor
-        if(clickedColor === pickedColor){
-            // alert("correct");
-            
-            header.style.backgroundColor = clickedColor;
-            header.classList.add("correct");
-            messageDispaly.textContent = "CORRECT ";
-            changeColor(clickedColor);
-            newGameButton.textContent = "Play Again?";
-        }else{
-            // alert("Wrong");
-            this.style.backgroundColor = "#232323";
-            messageDispaly.textContent = "try again ";
-        }
-    });
+//check if correct box was clicked
+function ifCorrect(){
+    for (i = 0; i < boxes.length; i++){
+        //add colors to boxs
+        boxes[i].style.backgroundColor = colors[i];
+        // add click event listener
+        boxes[i].addEventListener("click", function(){
+            //grab clicked color box
+            var clickedColor = this.style.backgroundColor;
+            //compare to pickedColor
+            if(clickedColor === pickedColor){        
+                header.style.backgroundColor = clickedColor;
+                header.classList.add("correct");
+                messageDispaly.textContent = "CORRECT ";
+                changeColor(clickedColor);
+                newGameButton.textContent = "Play Again?";
+            }else{
+                this.style.backgroundColor = "#232323";
+                messageDispaly.textContent = "try again ";
+            }
+        });
+    }
 }
+ifCorrect();
 
 //change all colors to match correct color
 function changeColor(color){
@@ -117,29 +115,5 @@ newGameButton.addEventListener("click", function(){
             boxes[i].style.display = "block"
         }
     }
-
-    for (i = 0; i < boxes.length; i++){
-        //add colors to boxs
-        boxes[i].style.backgroundColor = colors[i];
-        // add click event listener
-        boxes[i].addEventListener("click", function(){
-            // alert(" was clicked!");
-            //grab clicked color box
-            var clickedColor = this.style.backgroundColor;
-            //compare to pickedColor
-            if(clickedColor === pickedColor){
-                // alert("correct");
-                
-                header.style.backgroundColor = clickedColor;
-                header.classList.add("correct");
-                messageDispaly.textContent = "CORRECT ";
-                changeColor(clickedColor);
-                newGameButton.textContent = "Play Again?";
-            }else{
-                // alert("Wrong");
-                this.style.backgroundColor = "#232323";
-                messageDispaly.textContent = "try again ";
-            }
-        });
-    }
+    ifCorrect();
 });
