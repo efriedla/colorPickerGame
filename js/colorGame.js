@@ -10,10 +10,12 @@ var newGameButton = document.getElementById("newGame");
 var easyBtn = document.querySelector("#easybtn");
 var hardBtn = document.querySelector("#hardbtn");
 easyBtn.addEventListener("click", function(){
-    alert("easy button clicked");
+    easyBtn.classList.add("selected");
+    hardBtn.classList.remove("selected");
 });
 hardBtn.addEventListener("click", function(){
-    alert("hard button clicked");
+    hardBtn.classList.add("selected");
+    easyBtn.classList.remove("selected");
 });
 for (i = 0; i < boxes.length; i++){
     //add colors to boxs
