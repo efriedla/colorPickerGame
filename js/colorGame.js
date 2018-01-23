@@ -12,10 +12,24 @@ var hardBtn = document.querySelector("#hardbtn");
 easyBtn.addEventListener("click", function(){
     easyBtn.classList.add("selected");
     hardBtn.classList.remove("selected");
+    colors = generateRandomColors(3);
+    pickedColor = pickNewColor();
+    colorDisplay.textContent = pickedColor;
+    header.style.backgroundColor = "black";
+    restartBasic(3);
+    // for (i = 0; i < boxes.length; i++){
+    //     if(colors[i]){
+    //         boxes.style.backgroundColor = colors[i];
+    //     }
+    // }
+    console.log(colors)
 });
 hardBtn.addEventListener("click", function(){
     hardBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
+    restartBasic(6);
+    console.log(colors)
+   
 });
 for (i = 0; i < boxes.length; i++){
     //add colors to boxs
@@ -86,12 +100,10 @@ function restartBasic(num){
 }
 //on click button will restart the game and give new colors
 newGameButton.addEventListener("click", function(){
-    // alert("button clicked");
-    // colors = generateRandomColors(6);
-    // pickedColor = pickNewColor();
-    // colorDisplay.textContent = pickedColor;
-    // header.style.backgroundColor = "black";
     restartBasic(6);
+    hardBtn.classList.add("selected");
+    easyBtn.classList.remove("selected");
+
     for (i = 0; i < boxes.length; i++){
         //add colors to boxs
         boxes[i].style.backgroundColor = colors[i];
