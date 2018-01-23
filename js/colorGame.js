@@ -7,7 +7,7 @@ var colors = [
     "rgb(0, 255, 255)",
 ]
 var boxes = document.querySelectorAll(".box");
-var pickedColor = colors[5];
+var pickedColor = pickNewColor();
 var colorDisplay = document.querySelector("#colorDisplay");
 colorDisplay.textContent = pickedColor;
 var header = document.querySelector("header");
@@ -42,4 +42,10 @@ function changeColor(color){
     for(i = 0; i < boxes.length; i++){
         boxes[i].style.backgroundColor = color;
     }
+}
+
+//pick a new color
+function pickNewColor(){
+    var random = Math.floor(Math.random() * colors.length);
+    return colors[random];
 }
