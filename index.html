@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Color Picking Game</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h2>Color Picking Game</h2>
+      <p>Current color: <span id="colorDisplay"></span></p>
+    </header>
+    <div class="bar">
+        <span>New Colors  </span>
+        <span id="message"></span>
+        <label for="easy">Easy</label>
+        <input type="radio" id="easy" name="gameLevel" value="easy">
+        <label for="hard">Hard</label>
+        <input type="radio" id="hard" name="gameLevel" value="hard">
+    </div>
+    <div>
+      <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+ 
+    <script src="js/colorGame.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/* .box{
+    border: solid;
+    display: inline-block;
+    width: 50px;
+    max-height: auto;
+    margin: 1.66%;
+    float: left;
+    background: black;
+    height: 50px;
+    
+  }
+  
+  .container{
+    border: solid;
+    display: block;
+    clear: left;
+    height: 100px;
+    padding: 10px;
+  } */
+  body{
+      background: #232323;
+  }
+  header{
+      color: white;
+      text-align: center;
+
+  }
+  .box{
+    margin: 1.66%;
+    width: 30%;
+    background: purple;
+    padding-bottom: 30%;
+    float: left;
+  }
+  .container{
+      max-width: 600px;
+      margin: auto;
+  }
+  .correct{
+      color:black;
+  }
+  .bar{
+      float: left;
+      display: inline-block;
+      color: white;
+      text-align: center;
+      margin: 1.66%;
+      width: 100%;
+  }
+  .bar span{
+      width: 30%;
+      margin: 1.66%;
+  }
