@@ -30,7 +30,12 @@ hardBtn.addEventListener("click", function(){
     hardBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
     restartBasic(6);
-    console.log(colors)
+    for (i = 0; i < boxes.length; i++){
+        boxes[i].style.backgroundColor = colors[i];
+        if(boxes[i].style.display = "none"){
+            boxes[i].style.display = "block"
+        }
+    }
    
 });
 for (i = 0; i < boxes.length; i++){
@@ -105,6 +110,12 @@ newGameButton.addEventListener("click", function(){
     restartBasic(6);
     hardBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
+    for (i = 0; i < boxes.length; i++){
+        boxes[i].style.backgroundColor = colors[i];
+        if(boxes[i].style.display = "none"){
+            boxes[i].style.display = "block"
+        }
+    }
 
     for (i = 0; i < boxes.length; i++){
         //add colors to boxs
