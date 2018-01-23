@@ -17,12 +17,14 @@ easyBtn.addEventListener("click", function(){
     colorDisplay.textContent = pickedColor;
     header.style.backgroundColor = "black";
     restartBasic(3);
-    // for (i = 0; i < boxes.length; i++){
-    //     if(colors[i]){
-    //         boxes.style.backgroundColor = colors[i];
-    //     }
-    // }
-    console.log(colors)
+    for (i = 0; i < boxes.length; i++){
+        if(colors[i]){
+            boxes[i].style.backgroundColor = colors[i];
+        }else{
+            boxes[i].style.display = "none";
+        }
+    }
+    
 });
 hardBtn.addEventListener("click", function(){
     hardBtn.classList.add("selected");
