@@ -7,6 +7,14 @@ var header = document.querySelector("header");
 var messageDispaly = document.getElementById("message");
 messageDispaly.textContent = "start";
 var newGameButton = document.getElementById("newGame");
+var easyBtn = document.querySelector("#easybtn");
+var hardBtn = document.querySelector("#hardbtn");
+easyBtn.addEventListener("click", function(){
+    alert("easy button clicked");
+});
+hardBtn.addEventListener("click", function(){
+    alert("hard button clicked");
+});
 for (i = 0; i < boxes.length; i++){
     //add colors to boxs
     boxes[i].style.backgroundColor = colors[i];

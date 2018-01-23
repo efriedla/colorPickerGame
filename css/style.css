@@ -1,22 +1,4 @@
-/* .box{
-    border: solid;
-    display: inline-block;
-    width: 50px;
-    max-height: auto;
-    margin: 1.66%;
-    float: left;
-    background: black;
-    height: 50px;
-    
-  }
-  
-  .container{
-    border: solid;
-    display: block;
-    clear: left;
-    height: 100px;
-    padding: 10px;
-  } */
+
   body{
       background: #232323;
   }
@@ -25,6 +7,7 @@
       text-align: center;
       padding: 5% 10%;
       margin: -15px;
+      background-color: rgb(83, 156, 199);
 
   }
   .box{
@@ -52,15 +35,12 @@
       right:0;
       width: 100%;
      margin-bottom: 50px;;
-     height: 30px;
+     /* height: 30px; */
   }
   .bar span{
       width: 30%;
       margin: 1.66%;
   }
-  br{
-    clear: both;
-    margin: 12%;
-    display: block;
-    min-height: 25px;
-  }
+.selected{
+    background-color: rgb(83, 156, 199);
+}
