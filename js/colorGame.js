@@ -98,12 +98,13 @@ function makeColors(){
     var blue = Math.floor(Math.random() * 256);
     return "rgb("+ red +", "+ green +", "+ blue +")";
 }
-
+//easy restart basics
 function restartBasic(num){
     colors = generateRandomColors(num);
     pickedColor = pickNewColor();
     colorDisplay.textContent = pickedColor;
     header.style.backgroundColor = "rgb(83, 156, 199)";
+    newGameButton.textContent = "New Colors";
 }
 //on click button will restart the game and give new colors
 newGameButton.addEventListener("click", function(){
