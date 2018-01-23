@@ -39,9 +39,9 @@
       margin: auto;
       margin-top: 30px;
   }
-  .correct{
+  /* .correct{
       color:black;
-  }
+  } */
   .bar{
       /* float: left; */
       display: inline-block;

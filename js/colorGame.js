@@ -6,6 +6,7 @@ colorDisplay.textContent = pickedColor;
 var header = document.querySelector("header");
 var messageDispaly = document.getElementById("message");
 messageDispaly.textContent = "start";
+var newGameButton = document.getElementById("newGame");
 for (i = 0; i < boxes.length; i++){
     //add colors to boxs
     boxes[i].style.backgroundColor = colors[i];
@@ -22,6 +23,7 @@ for (i = 0; i < boxes.length; i++){
             header.classList.add("correct");
             messageDispaly.textContent = "CORRECT ";
             changeColor(clickedColor);
+            newGameButton.textContent = "Play Again?";
         }else{
             // alert("Wrong");
             this.style.backgroundColor = "#232323";
@@ -65,3 +67,36 @@ function makeColors(){
     var blue = Math.floor(Math.random() * 256);
     return "rgb("+ red +", "+ green +", "+ blue +")";
 }
+
+//on click button will restart the game and give new colors
+newGameButton.addEventListener("click", function(){
+    // alert("button clicked");
+    colors = generateRandomColors(6);
+    pickedColor = pickNewColor();
+    colorDisplay.textContent = pickedColor;
+    header.style.backgroundColor = "black";
+    for (i = 0; i < boxes.length; i++){
+        //add colors to boxs
+        boxes[i].style.backgroundColor = colors[i];
+        // add click event listener
+        boxes[i].addEventListener("click", function(){
+            // alert(" was clicked!");
+            //grab clicked color box
+            var clickedColor = this.style.backgroundColor;
+            //compare to pickedColor
+            if(clickedColor === pickedColor){
+                // alert("correct");
+                
+                header.style.backgroundColor = clickedColor;
+                header.classList.add("correct");
+                messageDispaly.textContent = "CORRECT ";
+                changeColor(clickedColor);
+                newGameButton.textContent = "Play Again?";
+            }else{
+                // alert("Wrong");
+                this.style.backgroundColor = "#232323";
+                messageDispaly.textContent = "try again ";
+            }
+        });
+    }
+});
