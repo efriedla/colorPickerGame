@@ -103,7 +103,7 @@ function restartBasic(num){
     colors = generateRandomColors(num);
     pickedColor = pickNewColor();
     colorDisplay.textContent = pickedColor;
-    header.style.backgroundColor = "black";
+    header.style.backgroundColor = "rgb(83, 156, 199)";
 }
 //on click button will restart the game and give new colors
 newGameButton.addEventListener("click", function(){
