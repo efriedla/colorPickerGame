@@ -23,6 +23,8 @@
   header{
       color: white;
       text-align: center;
+      padding: 5% 10%;
+      margin: -15px;
 
   }
   .box{
@@ -35,19 +37,30 @@
   .container{
       max-width: 600px;
       margin: auto;
+      margin-top: 30px;
   }
   .correct{
       color:black;
   }
   .bar{
-      float: left;
+      /* float: left; */
       display: inline-block;
-      color: white;
+      background-color: white;
       text-align: center;
-      margin: 1.66%;
+      position:absolute;
+      left:0;
+      right:0;
       width: 100%;
+     margin-bottom: 50px;;
+     height: 30px;
   }
   .bar span{
       width: 30%;
       margin: 1.66%;
+  }
+  br{
+    clear: both;
+    margin: 12%;
+    display: block;
+    min-height: 25px;
   }
