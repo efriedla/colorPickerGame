@@ -78,13 +78,20 @@ function makeColors(){
     return "rgb("+ red +", "+ green +", "+ blue +")";
 }
 
-//on click button will restart the game and give new colors
-newGameButton.addEventListener("click", function(){
-    // alert("button clicked");
-    colors = generateRandomColors(6);
+function restartBasic(num){
+    colors = generateRandomColors(num);
     pickedColor = pickNewColor();
     colorDisplay.textContent = pickedColor;
     header.style.backgroundColor = "black";
+}
+//on click button will restart the game and give new colors
+newGameButton.addEventListener("click", function(){
+    // alert("button clicked");
+    // colors = generateRandomColors(6);
+    // pickedColor = pickNewColor();
+    // colorDisplay.textContent = pickedColor;
+    // header.style.backgroundColor = "black";
+    restartBasic(6);
     for (i = 0; i < boxes.length; i++){
         //add colors to boxs
         boxes[i].style.backgroundColor = colors[i];
