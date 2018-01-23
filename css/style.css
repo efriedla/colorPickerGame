@@ -3,6 +3,7 @@
       background: #232323;
       margin: 0;
       font-family: 'Cinzel Decorative', cursive;
+      letter-spacing: 2px;
   }
   header{
       color: rgb(255, 254, 254);
@@ -22,6 +23,7 @@
     background: purple;
     padding-bottom: 30%;
     float: left;
+    cursor: pointer;
   }
   .container{
       max-width: 600px;
@@ -50,6 +52,10 @@
       margin: 1.66%;
       padding: 5px;
   }
+  .button:hover{
+    opacity: .6;
+    cursor: pointer;
+}
 .selected{
     background-color: rgb(83, 156, 199);
     color: white;
