@@ -51,7 +51,6 @@ function ifCorrect(){
             //compare to pickedColor
             if(clickedColor === pickedColor){        
                 header.style.backgroundColor = clickedColor;
-                header.classList.add("correct");
                 messageDispaly.textContent = "CORRECT ";
                 changeColor(clickedColor);
                 newGameButton.textContent = "Play Again?";
