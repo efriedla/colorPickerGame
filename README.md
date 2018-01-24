@@ -2,9 +2,10 @@
 ## This is a game where you can practice your rgb() color skills 
 #### Live Site : https://efriedla.github.io/colorPickerGame/
 ### New Game
-![Alt text](http://g.recordit.co/v8yk3yNNad.gif)
  - Here you can see that all the colors are randomized when "New Colors" is clicked
  - - By using two functions one to randomly pick a number using rgb for each box. The other to randomize the color connecting red = Math.floor(Math.random() * 256), green = ... , blue = ...
+![Alt text](http://g.recordit.co/v8yk3yNNad.gif)
+
 ### If wrong
 - These next two I put in a function called ifCorrect
 - - If the color picked matches the color that is correct then the player will know it else you can continue clicking
