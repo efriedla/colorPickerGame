@@ -9,6 +9,7 @@ messageDispaly.textContent = "start";
 var newGameButton = document.getElementById("newGame");
 var easyBtn = document.querySelector("#easybtn");
 var hardBtn = document.querySelector("#hardbtn");
+
 easyBtn.addEventListener("click", function(){
     easyBtn.classList.add("selected");
     hardBtn.classList.remove("selected");
@@ -17,6 +18,7 @@ easyBtn.addEventListener("click", function(){
     colorDisplay.textContent = pickedColor;
     header.style.backgroundColor = "black";
     restartBasic(3);
+    //hide boxes that are not in use
     for (i = 0; i < boxes.length; i++){
         if(colors[i]){
             boxes[i].style.backgroundColor = colors[i];
@@ -29,6 +31,7 @@ hardBtn.addEventListener("click", function(){
     hardBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
     restartBasic(6);
+    //display any boxes that were hidden
     for (i = 0; i < boxes.length; i++){
         boxes[i].style.backgroundColor = colors[i];
         if(boxes[i].style.display = "none"){
