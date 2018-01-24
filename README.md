@@ -1,4 +1,3 @@
-#READ ME
 ## This is a game where you can practice your rgb() color skills 
 #### Live Site : https://efriedla.github.io/colorPickerGame/
 ### New Game
